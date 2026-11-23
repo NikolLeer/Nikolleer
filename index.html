@@ -130,6 +130,7 @@ section{position:relative}
 .card:hover .card__plus,.card:focus-visible .card__plus{transform:none;opacity:1}
 .card__plus svg{width:22px;height:22px}
 .card.is-hidden{display:none}
+.card__case{display:inline-block;margin-top:10px;font-size:13px;font-weight:700;background:#fff;color:var(--ink);padding:6px 12px;border-radius:999px}
 .grid__empty{grid-column:1/-1;text-align:center;color:var(--muted);padding:40px}
 
 /* ---------- About ---------- */
@@ -679,15 +680,16 @@ body.no-scroll{overflow:hidden}
     b.style.setProperty("--d", (idx % 2) * 0.08 + "s");
     b.dataset.index = idx;
     b.dataset.cat = p.kategorie || "";
-    b.setAttribute("aria-label", (p.titel || "Projekt") + " – Details ansehen");
+    b.setAttribute("aria-label", (p.titel || "Projekt") + (p.seite ? " – Case Study öffnen" : " – Details ansehen"));
     b.innerHTML =
       '<img src="' + esc(p.vorschau || p.bild) + '" alt="' + esc(p.titel) + (p.kurz ? " – " + esc(p.kurz) : "") + '" loading="lazy" decoding="async">' +
       '<div class="card__info"><div>' +
       (p.kategorie ? '<span class="card__cat">' + esc(p.kategorie) + "</span>" : "") +
       '<h3 class="card__title">' + esc(p.titel) + "</h3>" +
       (p.kurz ? '<div class="card__kurz">' + esc(p.kurz) + "</div>" : "") +
+      (p.seite ? '<span class="card__case">Case Study ansehen →</span>' : "") +
       '</div><span class="card__plus" aria-hidden="true">' + plus + "</span></div>";
-    b.addEventListener("click", function () { openLb(idx); });
+    b.addEventListener("click", function () { if (p.seite) { window.location.href = p.seite; } else { openLb(idx); } });
     grid.appendChild(b);
     return b;
   });

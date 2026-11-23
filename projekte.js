@@ -28,6 +28,7 @@ window.PROJEKTE = [
   {
     titel: "happy rami",
     kategorie: "Packaging",
+    seite: "happy-rami.html",   // eigene Case-Study-Seite statt Großansicht
     kurz: "Markenauftritt & Verpackung für Hundesnacks",
     bild: "happy-rami.webp",
     vorschau: "happy-rami-vorschau.webp"

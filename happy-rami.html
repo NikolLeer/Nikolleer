@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>happy rami – Case Study | Nikol Leer</title>
+<meta name="description" content="Case Study happy rami: Branding und Marketing-Blueprint für eine fiktive Premium-Hundesnack-Marke – von Nikol Leer.">
+<meta name="theme-color" content="#0e0e10">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230e0e10'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial' font-weight='700' font-size='40' fill='%238c60e8'%3Ek%3C/text%3E%3C/svg%3E">
+<style>
+@font-face{font-family:"Poppins";src:url("poppins-bold.woff") format("woff");font-weight:700;font-display:swap}
+@font-face{font-family:"Poppins";src:url("poppins-medium.woff") format("woff");font-weight:500;font-display:swap}
+@font-face{font-family:"DM Sans";src:url("dmsans.woff") format("woff");font-weight:100 1000;font-display:swap}
+@font-face{font-family:"Typewriter";src:url("libmono-bold.woff") format("woff");font-weight:700;font-display:swap}
+@font-face{font-family:"Hand";src:url("hand.woff") format("woff");font-display:swap}
+
+:root{
+  --ink:#0e0e10; --ink-2:#17171c; --paper:#f6f4f0; --paper-2:#ece8e1;
+  --text:#18181b; --muted:#6b6b73; --line:rgba(0,0,0,.1);
+  --accent:#8c60e8; --accent-soft:#e9e1fb; --lime:#d6f26a;
+  /* happy rami Markenfarben */
+  --hr-navy:#23283c; --hr-blue:#9ed7df; --hr-pouch:#84abbc; --hr-sand:#e7e0ce; --hr-blush:#c8aeb9; --hr-sage:#afb688;
+  --radius:22px; --ease:cubic-bezier(.2,.8,.2,1);
+  --wrap:min(1180px, 100% - 48px);
+  --mono:"Typewriter","Courier New",monospace;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--text);font-family:"DM Sans",system-ui,sans-serif;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+button{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+.wrap{width:var(--wrap);margin-inline:auto}
+h1,h2,h3,h4{font-family:"Poppins",sans-serif;font-weight:700;line-height:1.08;letter-spacing:-.02em;margin:0}
+p{margin:0 0 14px}
+.eyebrow{font-family:"Poppins",sans-serif;font-weight:500;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);display:inline-flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:26px;height:2px;background:currentColor;border-radius:2px}
+.hl{color:var(--accent)}
+sup.src{font-family:var(--mono);font-size:11px;color:var(--accent);margin-left:2px}
+sup.src a{text-decoration:none}
+
+/* ---------- Nav ---------- */
+.nav{position:fixed;inset:16px 0 auto;z-index:50;pointer-events:none}
+.nav__inner{width:var(--wrap);margin-inline:auto;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 12px 10px 22px;border-radius:999px;pointer-events:auto;background:rgba(246,244,240,.85);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 8px 30px rgba(0,0,0,.08)}
+.logo{font-family:"Poppins",sans-serif;font-weight:700;font-size:24px;text-decoration:none;letter-spacing:-.03em}
+.logo .k,.logo .dot{color:var(--accent)}
+.nav__links{display:flex;gap:6px;list-style:none;margin:0;padding:0}
+.nav__links a{display:block;padding:8px 16px;border-radius:999px;text-decoration:none;font-weight:500;font-size:15px;transition:background .25s}
+.nav__links a:hover{background:rgba(140,96,232,.15)}
+.nav__links a.back{background:var(--ink);color:#fff}
+.nav__links a.back:hover{background:var(--accent)}
+
+/* ---------- Hero ---------- */
+.hero{background:var(--hr-sand);padding:150px 0 90px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(35,40,60,.12) 1.2px,transparent 1.2px);background-size:22px 22px;pointer-events:none}
+.hero__grid{position:relative;z-index:1;display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center}
+.hero__tag{display:inline-flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
+.chip{display:inline-block;font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;padding:6px 12px;border-radius:999px;border:1.5px solid var(--hr-navy);color:var(--hr-navy);background:rgba(255,255,255,.5)}
+.chip--fill{background:var(--hr-navy);color:#fff}
+.hero h1{font-size:clamp(52px,8vw,104px);letter-spacing:-.045em;color:var(--hr-navy)}
+.hero__lead{font-size:clamp(18px,1.6vw,21px);color:#3a3d4c;max-width:42ch;margin:22px 0 28px}
+.meta{display:grid;grid-template-columns:repeat(3,auto);gap:14px 34px;justify-content:start}
+.meta dt{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#6f6a5c}
+.meta dd{margin:2px 0 0;font-weight:600;color:var(--hr-navy)}
+.hero__logo{position:relative;display:grid;place-items:center}
+.hero__logo img{width:min(100%,460px);animation:bob 5s ease-in-out infinite;filter:drop-shadow(0 18px 26px rgba(35,40,60,.15))}
+@keyframes bob{50%{transform:translateY(-12px) rotate(-1.5deg)}}
+.toc{display:flex;flex-wrap:wrap;gap:8px;margin-top:46px;position:relative;z-index:1}
+.toc a{font-family:var(--mono);font-size:12px;text-decoration:none;padding:7px 12px;border-radius:999px;background:#fff;border:1px solid rgba(35,40,60,.15);color:var(--hr-navy);transition:all .25s var(--ease)}
+.toc a:hover{background:var(--hr-navy);color:#fff;transform:translateY(-2px)}
+
+/* ---------- Sections ---------- */
+.section{padding:clamp(80px,10vw,130px) 0;position:relative}
+.sec-head{margin-bottom:44px;max-width:760px}
+.sec-num{font-family:var(--mono);font-size:13px;color:var(--accent);letter-spacing:.1em}
+.sec-title{font-size:clamp(36px,5vw,60px);margin:10px 0 16px}
+.sec-intro{font-size:18px;color:#3c3c44}
+.why{position:relative;background:var(--accent-soft);border-left:4px solid var(--accent);border-radius:0 16px 16px 0;padding:18px 22px;margin-top:26px;font-size:16px}
+.why b{font-family:"Poppins",sans-serif;display:block;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:4px}
+.why p:last-child{margin:0}
+
+/* Branding */
+.brand-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:28px;align-items:stretch}
+.card{background:#fff;border-radius:var(--radius);padding:30px;box-shadow:0 1px 0 rgba(0,0,0,.04)}
+.logo-zoom{position:relative;background:var(--hr-sand);border-radius:var(--radius);display:grid;place-items:center;padding:40px;overflow:hidden;cursor:zoom-in;min-height:340px}
+.logo-zoom img{width:min(100%,420px);transition:transform .6s var(--ease)}
+.logo-zoom:hover img{transform:scale(1.35)}
+.logo-zoom .label{position:absolute;left:18px;bottom:16px}
+.logo-zoom .marks{position:absolute;inset:22px;border:1px dashed rgba(35,40,60,.3);pointer-events:none}
+.palette{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.swatch{border:0;padding:0;text-align:left;cursor:pointer;border-radius:16px;overflow:hidden;background:#fff;box-shadow:0 0 0 1px var(--line);transition:transform .3s var(--ease),box-shadow .3s}
+.swatch:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(0,0,0,.12)}
+.swatch i{display:block;height:78px}
+.swatch span{display:block;padding:10px 12px 12px}
+.swatch b{display:block;font-size:14px}
+.swatch code{font-family:var(--mono);font-size:13px;color:var(--muted)}
+.swatch.copied code::after{content:" ✓ kopiert";color:var(--accent)}
+.copy-hint{font-size:13px;color:var(--muted);margin-top:12px}
+.quotes{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:28px}
+.quote{background:var(--hr-navy);color:#fff;border-radius:18px;padding:34px 20px 20px;font-family:"Poppins",sans-serif;font-weight:500;font-size:16px;line-height:1.3;position:relative}
+.quote::before{content:"„";position:absolute;top:-8px;left:14px;font-size:54px;color:var(--hr-blue);line-height:1}
+.quote small{display:block;font-family:var(--mono);font-size:11px;color:var(--hr-blue);margin-top:10px;letter-spacing:.06em}
+.art{display:grid;grid-template-columns:1.6fr 1fr;gap:20px;margin-top:28px}
+.art figure{margin:0;border-radius:var(--radius);overflow:hidden;background:var(--paper-2);position:relative}
+.art img{width:100%;height:100%;object-fit:cover}
+.art figcaption{position:absolute;left:14px;bottom:14px}
+.soon{display:flex;gap:16px;align-items:center;margin-top:28px;border:1.5px dashed rgba(0,0,0,.2);border-radius:var(--radius);padding:22px 24px;background:repeating-linear-gradient(-45deg,#fff 0 12px,#faf9f6 12px 24px)}
+.soon .badge{flex:none;font-family:var(--mono);font-size:12px;text-transform:uppercase;background:var(--lime);padding:6px 12px;border-radius:999px;font-weight:700}
+.soon p{margin:0;color:#3c3c44}
+
+/* ---------- Blueprint (dark) ---------- */
+.bp{background:var(--ink);color:#e9e9ee;position:relative;overflow:hidden}
+.bp::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(rgba(255,255,255,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.08) 1px,transparent 1px);background-size:24px 24px,24px 24px,120px 120px,120px 120px;pointer-events:none}
+.bp>*{position:relative}
+.bp .sec-intro,.bp p{color:#c3c3cc}
+.bp .card{background:var(--ink-2);border:1px solid rgba(255,255,255,.1);color:#e9e9ee}
+.bp .why{background:rgba(140,96,232,.14);color:#e2dbf7}
+.bp-intro{padding:clamp(90px,11vw,140px) 0 20px}
+.bp-intro h2{font-size:clamp(44px,7vw,92px);letter-spacing:-.04em}
+.bp-intro h2 .outline{-webkit-text-stroke:1.5px #fff;color:transparent}
+.bp-label{font-family:var(--mono);font-size:12px;color:var(--lime);letter-spacing:.12em;text-transform:uppercase}
+.dim{position:relative;border:1px dashed rgba(255,255,255,.25);border-radius:4px;padding:26px;margin-top:30px}
+.dim::before,.dim::after{content:"+";position:absolute;color:var(--lime);font-family:var(--mono);font-size:16px}
+.dim::before{top:-11px;left:-6px}.dim::after{bottom:-11px;right:-6px}
+
+/* Story */
+.story{display:grid;grid-template-columns:1.25fr .75fr;gap:30px;align-items:start}
+.story__text p{font-size:18px;color:#d7d7de}
+.story__text p.big{font-family:"Poppins",sans-serif;font-weight:700;font-size:24px;color:#fff}
+.story__text em{color:var(--lime);font-style:normal}
+.cast{display:grid;gap:12px}
+.cast__item{display:flex;gap:14px;align-items:center;background:var(--ink-2);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:14px 16px;transition:transform .3s var(--ease),border-color .3s}
+.cast__item:hover{transform:translateX(6px);border-color:var(--accent)}
+.cast__dot{flex:none;width:46px;height:46px;border-radius:50%;display:grid;place-items:center;font-family:"Poppins",sans-serif;font-weight:700;color:var(--hr-navy)}
+.cast__item b{display:block;color:#fff}
+.cast__item small{color:#a9a9b3}
+.rip{display:inline-flex;align-items:center;gap:12px;margin-top:22px;border:1.5px solid rgba(255,255,255,.35);border-radius:999px;padding:12px 22px 12px 16px;background:rgba(255,255,255,.04);color:#fff;font-family:"Poppins",sans-serif;font-weight:500;cursor:default;transition:box-shadow .4s,border-color .4s}
+.rip:hover{border-color:var(--hr-blue);box-shadow:0 0 0 6px rgba(158,215,223,.12),0 0 40px rgba(158,215,223,.25)}
+.rip svg{width:22px;height:22px;color:var(--hr-blue);animation:beat 1.6s ease-in-out infinite}
+@keyframes beat{0%,100%{transform:scale(1)}15%{transform:scale(1.22)}30%{transform:scale(1)}45%{transform:scale(1.14)}}
+.memory{font-family:"Hand",cursive;font-size:22px;color:var(--hr-blue);margin-top:14px;display:block}
+
+/* KPI tiles */
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.kpi{background:var(--ink-2);border:1px solid rgba(255,255,255,.1);border-radius:18px;padding:22px 20px;position:relative;overflow:hidden}
+.kpi::after{content:"";position:absolute;left:0;bottom:0;height:3px;width:0;background:linear-gradient(90deg,var(--accent),var(--lime));transition:width 1.4s var(--ease)}
+.is-visible .kpi::after,.kpi.is-visible::after{width:100%}
+.kpi b{display:block;font-family:"Poppins",sans-serif;font-size:clamp(30px,3.3vw,44px);line-height:1;color:#fff;letter-spacing:-.03em}
+.kpi .unit{font-size:.5em;margin-left:4px;color:var(--lime)}
+.kpi small{display:block;color:#a9a9b3;margin-top:12px;font-size:14px;line-height:1.4}
+
+/* Tables */
+.tbl{width:100%;border-collapse:collapse;font-size:15px}
+.tbl caption{text-align:left;font-family:"Poppins",sans-serif;font-weight:700;font-size:18px;margin-bottom:14px;color:inherit}
+.tbl th,.tbl td{text-align:left;padding:12px 14px;border-bottom:1px solid rgba(255,255,255,.1);vertical-align:top}
+.tbl thead th{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--lime);font-weight:700}
+.tbl tbody tr{transition:background .25s}
+.tbl tbody tr:hover{background:rgba(255,255,255,.04)}
+.tbl .meter{height:8px;border-radius:8px;background:rgba(255,255,255,.08);overflow:hidden;min-width:120px;margin-top:6px}
+.tbl .meter i{display:block;height:100%;width:0;border-radius:8px;background:linear-gradient(90deg,var(--accent),#b294f2);transition:width 1.4s var(--ease)}
+.is-visible .tbl .meter i{width:var(--w)}
+.tbl .meter.lime i{background:linear-gradient(90deg,#a8c94a,var(--lime))}
+.tbl-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.light .tbl th,.light .tbl td{border-bottom-color:var(--line)}
+.light .tbl thead th{color:var(--accent)}
+
+/* Personas */
+.seg{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.seg .card h4{font-size:15px;margin-bottom:8px;color:var(--lime);font-family:var(--mono);text-transform:uppercase;letter-spacing:.08em;font-weight:700}
+.seg .card p{font-size:15px;margin:0}
+.side{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
+.side .card h4{font-size:17px;margin-bottom:8px}
+.personas{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:40px}
+.persona{background:#fff;color:var(--text);border-radius:var(--radius);padding:28px;position:relative;overflow:hidden;transition:transform .5s var(--ease)}
+.persona:hover{transform:translateY(-6px) rotate(-.4deg)}
+.persona__top{display:flex;gap:16px;align-items:center;margin-bottom:18px}
+.avatar{width:64px;height:64px;border-radius:50%;display:grid;place-items:center;font-family:"Poppins",sans-serif;font-weight:700;font-size:24px;color:var(--hr-navy)}
+.persona h3{font-size:24px}
+.persona .role{font-family:var(--mono);font-size:12px;color:var(--accent);text-transform:uppercase;letter-spacing:.08em}
+.persona dl{margin:0;display:grid;gap:10px}
+.persona dt{font-family:"Poppins",sans-serif;font-weight:700;font-size:13px;color:var(--muted)}
+.persona dd{margin:2px 0 0;font-size:15px}
+.persona .tagline{font-family:"Hand",cursive;font-size:22px;color:var(--accent);position:absolute;right:20px;top:18px;transform:rotate(4deg)}
+
+/* Positionierung */
+.bp .statement{font-family:"Poppins",sans-serif;font-weight:500;font-size:clamp(20px,2.4vw,30px);line-height:1.35;color:#fff;border-left:4px solid var(--lime);padding-left:24px;max-width:900px}
+.statement em{font-style:normal;color:var(--lime)}
+.pos{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-top:44px;align-items:center}
+.matrix{position:relative;aspect-ratio:1/1;max-width:480px;width:100%;margin:auto;border-left:2px solid rgba(255,255,255,.5);border-bottom:2px solid rgba(255,255,255,.5)}
+.matrix::before{content:"";position:absolute;left:50%;top:0;bottom:0;border-left:1px dashed rgba(255,255,255,.2)}
+.matrix::after{content:"";position:absolute;top:50%;left:0;right:0;border-top:1px dashed rgba(255,255,255,.2)}
+.axis{position:absolute;font-family:var(--mono);font-size:11px;color:#a9a9b3;letter-spacing:.06em;text-transform:uppercase}
+.axis--y{left:-12px;top:50%;transform:translate(-100%,-50%) rotate(-90deg);transform-origin:center;white-space:nowrap}
+.axis--x{bottom:-30px;left:50%;transform:translateX(-50%);white-space:nowrap}
+.axis--yt{left:8px;top:6px}.axis--yb{left:8px;bottom:6px}.axis--xl{left:8px;bottom:-22px}.axis--xr{right:0;bottom:-22px}
+.pt{position:absolute;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center}
+.pt i{width:16px;height:16px;border-radius:50%;background:#8a8a96;display:block}
+.pt span{font-size:13px;font-weight:600;white-space:nowrap}
+.pt--hr i{width:26px;height:26px;background:var(--lime);box-shadow:0 0 0 0 rgba(214,242,106,.6);animation:ping 2s infinite}
+.pt--hr span{font-family:"Poppins",sans-serif;color:var(--lime);font-size:16px}
+@keyframes ping{70%{box-shadow:0 0 0 18px rgba(214,242,106,0)}100%{box-shadow:0 0 0 0 rgba(214,242,106,0)}}
+.usp{display:grid;gap:14px}
+.usp .card h4{font-size:18px;margin-bottom:6px}
+.usp .card p{margin:0;font-size:15px}
+.values{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.values span{border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:6px 14px;font-size:14px;transition:all .25s}
+.values span:hover{background:var(--lime);color:var(--ink);border-color:var(--lime)}
+.msgs{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:40px}
+.msg{background:var(--ink-2);border:1px solid rgba(255,255,255,.1);border-radius:18px;padding:22px;transition:transform .4s var(--ease),border-color .3s}
+.msg:hover{transform:translateY(-6px);border-color:var(--lime)}
+.msg .n{font-family:var(--mono);color:var(--lime);font-size:13px}
+.msg h4{font-size:19px;margin:8px 0}
+.msg p{font-size:15px;margin:0}
+.claim{margin-top:50px;text-align:center;padding:50px 20px;border-radius:var(--radius);background:linear-gradient(135deg,rgba(140,96,232,.25),rgba(214,242,106,.12));border:1px solid rgba(255,255,255,.12)}
+.claim small{font-family:var(--mono);font-size:12px;color:var(--lime);letter-spacing:.12em;text-transform:uppercase}
+.claim h3{font-size:clamp(46px,8vw,110px);letter-spacing:-.04em;margin:10px 0 6px;color:#fff}
+.claim h3 .wiggle{display:inline-block;color:var(--lime);animation:wig 3s ease-in-out infinite}
+@keyframes wig{0%,80%,100%{transform:rotate(0)}85%{transform:rotate(-6deg)}90%{transform:rotate(5deg)}95%{transform:rotate(-3deg)}}
+.claim p{margin:0;color:#d7d7de}
+.products{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
+.product{border-radius:22px;padding:26px 22px 22px;color:var(--hr-navy);position:relative;overflow:hidden;transition:transform .5s cubic-bezier(.34,1.56,.64,1)}
+.product:hover{transform:translateY(-8px) rotate(-1.5deg)}
+.product .pouch{width:64px;height:78px;border-radius:10px 10px 14px 14px;background:rgba(255,255,255,.45);border:2px solid rgba(35,40,60,.25);margin-bottom:16px;position:relative}
+.product .pouch::before{content:"";position:absolute;left:8px;right:8px;top:8px;height:4px;border-radius:4px;background:rgba(35,40,60,.25)}
+.product h4{font-size:22px}
+.product p{margin:6px 0 0;font-size:15px;color:#3a3d4c}
+.product .tag{position:absolute;right:16px;top:16px;font-family:var(--mono);font-size:11px;background:var(--hr-navy);color:#fff;border-radius:999px;padding:4px 10px}
+
+/* Funnel */
+.funnel{display:grid;gap:12px}
+.stage{display:grid;grid-template-columns:200px 1fr;gap:20px;align-items:stretch}
+.stage__bar{position:relative;border-radius:14px;display:flex;flex-direction:column;justify-content:center;padding:18px 20px;color:var(--ink);font-family:"Poppins",sans-serif;clip-path:polygon(0 0,100% 0,100% 100%,0 100%);transform-origin:left;transform:scaleX(.2);opacity:0;transition:transform 1s var(--ease),opacity .6s;transition-delay:var(--d,0s)}
+.is-visible .stage__bar{transform:scaleX(1);opacity:1}
+.stage__bar b{font-size:24px;line-height:1}
+.stage__bar small{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.08em;margin-top:6px}
+.stage:nth-child(1) .stage__bar{background:var(--lime);margin-right:0}
+.stage:nth-child(2) .stage__bar{background:#c4e66b;margin-right:16px}
+.stage:nth-child(3) .stage__bar{background:#b294f2;margin-right:32px}
+.stage:nth-child(4) .stage__bar{background:var(--accent);color:#fff;margin-right:48px}
+.stage__body{background:var(--ink-2);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:16px 20px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px}
+.stage__body h5{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#a9a9b3;margin:0 0 6px}
+.stage__body p{margin:0;font-size:14px;color:#e2e2e8}
+.pills{display:flex;flex-wrap:wrap;gap:6px}
+.pills span{font-size:12px;border-radius:999px;padding:3px 10px;background:rgba(255,255,255,.08)}
+
+/* Community */
+.comm{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.comm .card{transition:transform .4s var(--ease)}
+.comm .card:hover{transform:translateY(-6px)}
+.comm .ico{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;font-size:24px;margin-bottom:14px}
+.comm h4{font-size:19px;margin-bottom:8px}
+.comm p{font-size:15px;margin:0}
+.bp .hashtag{font-family:"Poppins",sans-serif;font-weight:700;font-size:clamp(40px,7vw,90px);letter-spacing:-.04em;text-align:center;margin:10px 0 40px;background:linear-gradient(90deg,var(--lime),var(--hr-blue),var(--accent),var(--lime));background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:flow 8s linear infinite}
+@keyframes flow{to{background-position:300% 0}}
+.later{border-style:dashed !important}
+.later .badge{font-family:var(--mono);font-size:11px;background:var(--lime);color:var(--ink);padding:3px 10px;border-radius:999px;font-weight:700;margin-left:6px;vertical-align:2px}
+
+/* Instagram mockup */
+.ig{display:grid;grid-template-columns:400px 1fr;gap:clamp(30px,5vw,70px);align-items:start}
+.phone-wrap{position:sticky;top:110px}
+.phone{width:min(100%,370px);margin:auto;background:#000;border-radius:52px;padding:12px;box-shadow:0 0 0 2px #2a2a30,0 40px 80px rgba(0,0,0,.5);animation:float 6s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-10px)}}
+.screen{background:#fff;color:#111;border-radius:42px;overflow:hidden;font-size:13px;line-height:1.35;height:720px;overflow-y:auto;scrollbar-width:none;position:relative}
+.screen::-webkit-scrollbar{display:none}
+.island{position:sticky;top:0;z-index:3;background:#fff;padding:12px 26px 6px;display:flex;justify-content:space-between;align-items:center;font-weight:700;font-size:13px}
+.island i{width:92px;height:26px;background:#000;border-radius:20px;display:block}
+.ig-top{display:flex;justify-content:space-between;align-items:center;padding:6px 16px 10px;font-weight:700;font-size:17px}
+.ig-head{display:flex;align-items:center;gap:18px;padding:0 16px}
+.ig-ava{width:84px;height:84px;border-radius:50%;flex:none;padding:3px;background:conic-gradient(var(--accent),var(--lime),var(--hr-blue),var(--accent))}
+.ig-ava span{display:grid;place-items:center;width:100%;height:100%;border-radius:50%;background:var(--hr-sand);border:3px solid #fff;overflow:hidden}
+.ig-ava img{width:82%}
+.ig-stats{display:flex;flex:1;justify-content:space-around;text-align:center}
+.ig-stats b{display:block;font-size:16px}
+.ig-stats small{font-size:12px}
+.ig-bio{padding:12px 16px 0}
+.ig-name{font-weight:700}
+.ig-cat{color:#737373}
+.ig-link{color:#00376b;font-weight:600}
+.ig-btns{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;padding:12px 16px}
+.ig-btns span{background:#efefef;border-radius:8px;text-align:center;padding:7px 0;font-weight:600}
+.ig-btns span.primary{background:#0095f6;color:#fff}
+.ig-hl{display:flex;gap:14px;padding:6px 16px 12px;overflow-x:auto;scrollbar-width:none}
+.ig-hl::-webkit-scrollbar{display:none}
+.ig-hl div{text-align:center;flex:none;width:64px}
+.ig-hl i{display:grid;place-items:center;width:60px;height:60px;border-radius:50%;border:1px solid #dbdbdb;padding:3px;font-style:normal;font-size:22px}
+.ig-hl i span{display:grid;place-items:center;width:100%;height:100%;border-radius:50%}
+.ig-hl small{display:block;font-size:11px;margin-top:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ig-tabs{display:flex;justify-content:space-around;border-top:1px solid #dbdbdb;padding:8px 0;color:#737373;font-size:16px}
+.ig-tabs span:first-child{color:#111;border-bottom:1.5px solid #111;padding-bottom:6px}
+.ig-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+.tile{aspect-ratio:3/4;position:relative;overflow:hidden;display:grid;place-items:center;text-align:center;padding:8px;font-family:"Poppins",sans-serif;font-weight:700;font-size:12px;line-height:1.15;color:var(--hr-navy)}
+.tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.tile .pin,.tile .type{position:absolute;top:6px;right:6px;font-size:11px;color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.6);z-index:2}
+.tile .lbl{position:relative;z-index:1}
+.tile .lbl.on-img{position:absolute;left:6px;right:6px;bottom:6px;color:#fff;text-shadow:0 1px 4px rgba(0,0,0,.6);font-size:11px}
+.notes{display:grid;gap:14px;counter-reset:n}
+.note{display:grid;grid-template-columns:44px 1fr;gap:16px;background:var(--ink-2);border:1px solid rgba(255,255,255,.1);border-radius:18px;padding:20px;transition:border-color .3s,transform .4s var(--ease)}
+.note:hover{border-color:var(--lime);transform:translateX(6px)}
+.note::before{counter-increment:n;content:counter(n);width:40px;height:40px;border-radius:50%;background:var(--lime);color:var(--ink);display:grid;place-items:center;font-family:"Poppins",sans-serif;font-weight:700}
+.note h4{font-size:18px;margin-bottom:6px;color:#fff}
+.note p{font-size:15px;margin:0 0 8px}
+.note p:last-child{margin:0}
+.note code{font-family:var(--mono);font-size:13px;background:rgba(255,255,255,.08);padding:2px 6px;border-radius:6px;color:var(--lime)}
+.biobox{font-family:var(--mono);font-size:13px;white-space:pre-line;background:#000;border:1px dashed rgba(255,255,255,.25);border-radius:12px;padding:12px 14px;color:#fff;margin:8px 0}
+.counter{font-family:var(--mono);font-size:12px;color:var(--lime)}
+
+/* Newsletter */
+.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:0;align-items:stretch;position:relative}
+.flow__step{position:relative;padding:0 10px;text-align:center}
+.flow__step::after{content:"";position:absolute;top:34px;left:60%;right:-40%;height:2px;background:repeating-linear-gradient(90deg,var(--lime) 0 8px,transparent 8px 14px);background-size:28px 2px;animation:dash 1.2s linear infinite}
+.flow__step:last-child::after{display:none}
+@keyframes dash{to{background-position:28px 0}}
+.flow__icon{width:68px;height:68px;margin:0 auto 14px;border-radius:20px;display:grid;place-items:center;font-size:28px;background:var(--ink-2);border:1px solid rgba(255,255,255,.15);position:relative;z-index:1;transition:transform .4s cubic-bezier(.34,1.56,.64,1)}
+.flow__step:hover .flow__icon{transform:scale(1.12) rotate(-6deg);border-color:var(--lime)}
+.flow__step h4{font-size:16px;margin-bottom:4px;color:#fff}
+.flow__step p{font-size:13px;margin:0}
+.flow__step .when{font-family:var(--mono);font-size:11px;color:var(--lime)}
+
+/* Outlook */
+.outlook{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.outlook div{border:1.5px dashed rgba(255,255,255,.25);border-radius:16px;padding:18px;text-align:center;transition:all .3s}
+.outlook div:hover{border-color:var(--lime);background:rgba(214,242,106,.06)}
+.outlook b{display:block;font-family:"Poppins",sans-serif;font-size:15px;color:#fff;margin-bottom:6px}
+.outlook small{font-family:var(--mono);font-size:11px;color:var(--lime);text-transform:uppercase}
+
+/* Sources */
+.sources{background:var(--paper);padding:70px 0 90px}
+.sources ol{columns:2;column-gap:40px;font-size:14px;color:#3c3c44;padding-left:22px;margin:24px 0 0}
+.sources li{margin-bottom:10px;break-inside:avoid}
+.sources a{color:var(--accent);word-break:break-word}
+.back-cta{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;margin-top:50px;padding-top:30px;border-top:1px solid var(--line)}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 24px;border-radius:999px;text-decoration:none;font-weight:600;background:var(--ink);color:#fff;transition:transform .3s var(--ease),background .3s}
+.btn:hover{transform:translateY(-2px);background:var(--accent)}
+.sources .btn{color:#fff}
+.footer{background:var(--ink);color:rgba(255,255,255,.5);font-size:14px}
+.footer .wrap{display:flex;justify-content:space-between;gap:12px;padding:26px 0;flex-wrap:wrap}
+.footer a{text-decoration:none}.footer a:hover{color:#fff}
+
+.ig>*,.seg>*,.story>*,.pos>*,.brand-grid>*,.hero__grid>*,.personas>*{min-width:0}
+/* Reveal */
+.reveal{opacity:0;transform:translateY(36px);transition:opacity .9s var(--ease),transform .9s var(--ease);transition-delay:var(--d,0s)}
+.reveal.is-visible{opacity:1;transform:none}
+
+/* Responsive */
+@media (max-width:1000px){
+  .hero__grid,.brand-grid,.story,.pos,.ig{grid-template-columns:1fr}
+  .hero__logo{order:-1}
+  .hero__logo img{width:min(80%,340px)}
+  .kpis,.seg{grid-template-columns:1fr 1fr}
+  .quotes{grid-template-columns:1fr 1fr}
+  .phone-wrap{position:relative;top:0}
+  .outlook{grid-template-columns:repeat(3,1fr)}
+}
+@media (max-width:760px){
+  :root{--wrap:min(1180px, 100% - 32px)}
+  body{font-size:16px}
+  .nav__links li:not(:last-child){display:none}
+  .hero{padding-top:120px}
+  .meta{grid-template-columns:1fr 1fr}
+  .art,.personas,.side,.msgs,.products,.comm,.seg{grid-template-columns:1fr}
+  .palette{grid-template-columns:1fr 1fr}
+  .quotes{grid-template-columns:1fr}
+  .stage{grid-template-columns:1fr;gap:8px}
+  .stage:nth-child(n) .stage__bar{margin-right:0}
+  .stage__body{grid-template-columns:1fr}
+  .flow{grid-template-columns:1fr;gap:18px}
+  .flow__step{display:grid;grid-template-columns:68px 1fr;gap:14px;text-align:left;align-items:center}
+  .flow__icon{margin:0}
+  .flow__step::after{display:none}
+  .outlook{grid-template-columns:1fr 1fr}
+  .sources ol{columns:1}
+  .screen{height:620px}
+  .axis--y{display:none}
+  .persona .tagline{position:static;display:block;transform:rotate(-2deg);margin-bottom:10px}
+  .tbl thead{display:none}
+  .tbl tr{display:block;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+  .tbl td{display:block;border:0;padding:3px 0}
+  .tbl td:first-child{font-size:17px;color:#fff}
+  .tbl .meter{max-width:220px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+  .reveal{opacity:1;transform:none}
+  .stage__bar{transform:none;opacity:1}
+}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav__inner">
+    <a href="index.html" class="logo" aria-label="Nikol Leer – Startseite">ni<span class="k">k</span>ol<span class="dot">.</span></a>
+    <ul class="nav__links">
+      <li><a href="#branding">Branding</a></li>
+      <li><a href="#marketing">Marketing</a></li>
+      <li><a href="index.html#projekte" class="back">← Alle Projekte</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="wrap hero__grid">
+    <div class="reveal">
+      <div class="hero__tag"><span class="chip chip--fill">Case Study</span><span class="chip">Branding</span><span class="chip">Packaging</span><span class="chip">Marketing</span></div>
+      <h1>happy rami</h1>
+      <p class="hero__lead">Eine fiktive Premium-Hundesnack-Marke – von der ersten Logo-Skizze bis zur vollständigen Online-Marketing-Strategie. Mit einem echten Hund als Gesicht: meinem Rami.</p>
+      <dl class="meta">
+        <div><dt>Projekt</dt><dd>Fiktive D2C-Marke</dd></div>
+        <div><dt>Meine Rolle</dt><dd>Branding, Packaging, Strategie</dd></div>
+        <div><dt>Claim</dt><dd>Share the happy.</dd></div>
+      </dl>
+    </div>
+    <div class="hero__logo reveal" style="--d:.15s"><img src="hr-logo.webp" width="544" height="367" alt="Logo happy rami mit Herz und dem Zusatz made for happy smiles"></div>
+  </div>
+  <nav class="wrap toc" aria-label="Inhalt">
+    <a href="#branding">01 Branding</a><a href="#story">02 Story</a><a href="#markt">03 Markt</a><a href="#zielgruppe">04 Zielgruppe</a><a href="#positionierung">05 Positionierung</a><a href="#funnel">06 Funnel</a><a href="#community">07 Community</a><a href="#instagram">08 Instagram</a><a href="#newsletter">09 Newsletter</a><a href="#ausblick">10 Ausblick</a>
+  </nav>
+</section>
+
+<!-- ===== 01 BRANDING ===== -->
+<section class="section" id="branding">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">01 — BRANDING</span>
+      <h2 class="sec-title">Logo &amp; Farbwelt<span class="hl">.</span></h2>
+      <p class="sec-intro">Handschriftlich, rund und ein kleines Herz als i-Punkt: Das Logo soll sich anfühlen wie ein Lächeln.</p>
+    </div>
+    <div class="brand-grid">
+      <div class="logo-zoom reveal" title="Hover zum Heranzoomen">
+        <span class="marks" aria-hidden="true"></span>
+        <img src="hr-logo.webp" width="544" height="367" alt="happy rami Logo in Nahaufnahme">
+        <span class="label chip">Logo · Hover = Zoom</span>
+      </div>
+      <div class="card reveal" style="--d:.1s">
+        <h3 style="font-size:20px;margin-bottom:16px">Farbcodes</h3>
+        <div class="palette" id="palette">
+          <button class="swatch" data-hex="#23283C"><i style="background:#23283c"></i><span><b>Midnight Navy</b><code>#23283C</code></span></button>
+          <button class="swatch" data-hex="#9ED7DF"><i style="background:#9ed7df"></i><span><b>Happy Blue</b><code>#9ED7DF</code></span></button>
+          <button class="swatch" data-hex="#84ABBC"><i style="background:#84abbc"></i><span><b>Pouch Blue</b><code>#84ABBC</code></span></button>
+          <button class="swatch" data-hex="#E7E0CE"><i style="background:#e7e0ce"></i><span><b>Sand</b><code>#E7E0CE</code></span></button>
+          <button class="swatch" data-hex="#C8AEB9"><i style="background:#c8aeb9"></i><span><b>Blush</b><code>#C8AEB9</code></span></button>
+          <button class="swatch" data-hex="#AFB688"><i style="background:#afb688"></i><span><b>Sage</b><code>#AFB688</code></span></button>
+        </div>
+        <p class="copy-hint">Klick auf eine Farbe kopiert den HEX-Code.</p>
+      </div>
+    </div>
+    <div class="quotes">
+      <div class="quote reveal">made for happy smiles.<small>LOGO-ZUSATZ</small></div>
+      <div class="quote reveal" style="--d:.08s">Every snack starts with a smile.<small>SOCIAL POST</small></div>
+      <div class="quote reveal" style="--d:.16s">Echte Zutaten. Keine Kompromisse. Nur Freude in jeder Tüte.<small>ANZEIGE</small></div>
+      <div class="quote reveal" style="--d:.24s">happy snacks – happy dogs – happy rami<small>BRAND-LINE</small></div>
+    </div>
+    <div class="art">
+      <figure class="reveal"><img src="happy-rami.webp" width="1800" height="1273" loading="lazy" alt="happy rami Verpackung, Social Posts und Anzeige im Überblick"><figcaption class="chip">Packaging &amp; Social</figcaption></figure>
+      <figure class="reveal" style="--d:.1s"><img src="hr-ad.webp" width="620" height="1040" loading="lazy" alt="happy rami Anzeige mit drei Verpackungen"><figcaption class="chip">Anzeige</figcaption></figure>
+    </div>
+    <div class="soon reveal"><span class="badge">Coming soon</span><p>Hier erkläre ich bald aus Sicht der Gestalterin, warum ich mich für Schrift, Farben und den Illustrationsstil der Hunde entschieden habe.</p></div>
+  </div>
+</section>
+
+<!-- ===== MARKETING BLUEPRINT ===== -->
+<div class="bp" id="marketing">
+
+  <div class="wrap bp-intro reveal">
+    <span class="bp-label">// Marketing-Blueprint</span>
+    <h2>Vom Logo zur <span class="outline">Strategie</span><span style="color:var(--lime)">.</span></h2>
+    <p class="sec-intro" style="max-width:680px;margin-top:18px">Ich bewerbe mich auch im Online-Marketing. Deshalb habe ich für happy rami eine komplette Strategie entwickelt: datenbasiert, mit klaren Entscheidungen und dem Warum dahinter.</p>
+  </div>
+
+  <!-- 02 STORY -->
+  <section class="section" id="story">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="sec-num">02 — MARKENGESCHICHTE</span>
+        <h2 class="sec-title">Ein Cocker, eine Möpsin &amp; ein Rivale<span class="hl">.</span></h2>
+      </div>
+      <div class="story">
+        <div class="story__text reveal">
+          <p class="big">Das ist Rami. Cocker Spaniel, Herzensbrecher, Snack-Experte.</p>
+          <p>Rami hat eine Schwäche: Kira, die kleine Möpsin aus der Nachbarschaft.</p>
+          <p>Das Problem: Er war nicht der Einzige. <em>Ray, der Husky</em> – groß, stark, eisblaue Augen, die ganze Straße drehte sich nach ihm um. Gegen so einen hat ein Cocker Spaniel eigentlich keine Chance.</p>
+          <p><em>Eigentlich.</em></p>
+          <p>Denn Rami hatte einen Plan: Wer Herzen erobern will, braucht die besten Snacks der Straße. Also haben wir sie gemacht – mit echten Zutaten, ohne Kompromisse und so schön verpackt, dass man sie am liebsten sofort verschenkt.</p>
+          <p>Rami kam mit Snacks. Kira wurde happy. Und Ray stand zum ersten Mal im Schatten.</p>
+          <p>Aber Rami ist kein Egoist. Er hat Ray eine Tüte abgegeben – und von da an war die ganze Nachbarschaft happy. Kira sowieso. Und alle anderen Hündinnen der Straße auch.</p>
+          <p class="big">Ein Snack macht einen Hund happy. Geteilt macht er alle happy. <em>Share the happy.</em></p>
+          <span class="rip" aria-label="Rest in Peace, Ray"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.5-9.2C1 8.3 3.2 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.8 0 6 3.8 4.5 7.3C19.5 16.4 12 21 12 21z"/></svg>Rest in Peace, Ray</span>
+          <span class="memory">In liebevoller Erinnerung an Ray. Der stärkste Rivale, den Rami je hatte.</span>
+        </div>
+        <div class="reveal" style="--d:.1s">
+          <div class="cast">
+            <div class="cast__item"><span class="cast__dot" style="background:var(--hr-pouch)">R</span><div><b>Rami</b><small>Cocker Spaniel · der Held &amp; das Gesicht der Marke</small></div></div>
+            <div class="cast__item"><span class="cast__dot" style="background:var(--hr-blush)">K</span><div><b>Kira</b><small>Möpsin · die Angebetete</small></div></div>
+            <div class="cast__item"><span class="cast__dot" style="background:var(--hr-blue)">R</span><div><b>Ray</b><small>Husky · der stärkste Rivale</small></div></div>
+            <div class="cast__item"><span class="cast__dot" style="background:var(--hr-sage)">♥</span><div><b>Die Nachbarschaft</b><small>alle, die am Ende happy sind</small></div></div>
+          </div>
+          <div class="why"><b>Warum eine Story?</b><p>Ich habe mich bewusst für eine Geschichte mit echten Hunden entschieden. Die Zielgruppe ist digital, aber vorsichtig – echte Charaktere wirken glaubwürdiger als Werbeversprechen, und das Produkt ist in der Story nicht Deko, sondern die Lösung.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 MARKT -->
+  <section class="section" id="markt">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="sec-num">03 — MARKT &amp; FAKTEN</span>
+        <h2 class="sec-title">Die Zahlen dahinter<span class="hl">.</span></h2>
+        <p class="sec-intro">Bevor ich Maßnahmen plane, prüfe ich, ob der Markt da ist – und wo die Zielgruppe wirklich unterwegs ist.</p>
+      </div>
+      <div class="kpis reveal">
+        <div class="kpi"><b><span data-count="768">768</span><span class="unit">Mio. €</span></b><small>Umsatz mit Hundesnacks in Deutschland 2025, +2,1 % zum Vorjahr<sup class="src"><a href="#q1">[1]</a></sup></small></div>
+        <div class="kpi"><b><span data-count="10" data-dec="1">10,0</span><span class="unit">Mio.</span></b><small>Hunde leben in deutschen Haushalten<sup class="src"><a href="#q2">[2]</a></sup></small></div>
+        <div class="kpi"><b><span data-count="1.5" data-dec="1">1,5</span><span class="unit">Mrd. €</span></b><small>Online-Umsatz mit Heimtierbedarf 2025 – gut 1,5 Mrd. €<sup class="src"><a href="#q3">[3]</a></sup></small></div>
+        <div class="kpi"><b><span data-count="75">75</span><span class="unit">%</span></b><small>der Gen-Z-Hundehalter*innen haben manchmal ein schlechtes Gewissen, ihrem Hund nicht genug zu bieten (Gen X: ca. 39 %)<sup class="src"><a href="#q4">[4]</a></sup></small></div>
+      </div>
+      <div class="dim reveal">
+        <div class="tbl-wrap">
+          <table class="tbl">
+            <caption>Wie lange lebt ein Post? – Plattform-Vergleich</caption>
+            <thead><tr><th>Plattform</th><th>Kennzahl</th><th>Visualisierung</th><th>Meine Konsequenz</th></tr></thead>
+            <tbody>
+              <tr><td><b>TikTok</b></td><td>96 % der Impressionen in den ersten 10 Tagen<sup class="src"><a href="#q7">[7]</a></sup></td><td><div class="meter"><i style="--w:96%"></i></div></td><td>Hohe Frequenz, schnelle Serien-Folgen</td></tr>
+              <tr><td><b>Instagram</b></td><td>65 % der Impressionen innerhalb von 3 Tagen<sup class="src"><a href="#q7">[7]</a></sup></td><td><div class="meter"><i style="--w:65%"></i></div></td><td>Community &amp; Vertrauen, Karussells zum Speichern</td></tr>
+              <tr><td><b>Pinterest</b></td><td>Halbwertszeit eines Pins: ca. 4 Monate<sup class="src"><a href="#q7">[7]</a></sup></td><td><div class="meter lime"><i style="--w:100%"></i></div></td><td>Evergreen-Content &amp; Geschenkideen mit Keywords</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="why reveal"><b>Meine Schlussfolgerung</b><p>Hundesnacks wachsen, online wird gekauft, und die junge Zielgruppe ist emotional ansprechbar. Gleichzeitig muss ein Premium-Preis durch sichtbaren Mehrwert untermauert werden<sup class="src"><a href="#q6">[6]</a></sup> – deshalb setze ich auf Transparenz bei Zutaten und auf Emotion durch die Story.</p></div>
+    </div>
+  </section>
+
+  <!-- 04 ZIELGRUPPE -->
+  <section class="section" id="zielgruppe">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="sec-num">04 — ZIELGRUPPE &amp; PERSONAS</span>
+        <h2 class="sec-title">Für wen ist happy rami<span class="hl">?</span></h2>
+        <p class="sec-intro">Erst definiere ich die Zielgruppe als Segment, dann mache ich sie mit zwei Buyer Personas greifbar.</p>
+      </div>
+      <h3 class="reveal" style="font-size:20px;margin-bottom:14px">Primäre Zielgruppe: design- &amp; qualitätsbewusste Hundehalter*innen</h3>
+      <div class="seg">
+        <div class="card reveal"><h4>Demografisch</h4><p>22–40 Jahre (Gen Z &amp; Millennials), alle Geschlechter, mittleres bis höheres Einkommen, Singles &amp; Paare ohne Kinder, Stadt &amp; Speckgürtel</p></div>
+        <div class="card reveal" style="--d:.06s"><h4>Geografisch</h4><p>Start in Deutschland, später DACH</p></div>
+        <div class="card reveal" style="--d:.12s"><h4>Psychografisch</h4><p>Hund = Familienmitglied. Emotionale Aspekte wie Humanisierung beeinflussen Kaufentscheidungen<sup class="src"><a href="#q15">[15]</a></sup>. Wert auf Zutaten &amp; Ästhetik.</p></div>
+        <div class="card reveal" style="--d:.18s"><h4>Verhalten</h4><p>Kauft regelmäßig Snacks, bestellt online, offen für neue Marken, vertraut Bewertungen &amp; echten Hunde-Videos</p></div>
+      </div>
+      <div class="side">
+        <div class="card reveal"><h4>Sekundär: Geschenkkäufer*innen</h4><p style="margin:0;font-size:15px">Umfeld von Hundehalter*innen ohne eigenen Hund. Anlass-getrieben, sucht gezielt auf Pinterest &amp; Google. Kaufkriterium: Optik &amp; Geschenk-Tauglichkeit.</p></div>
+        <div class="card reveal" style="--d:.08s"><h4>Bewusst nicht im Fokus</h4><p style="margin:0;font-size:15px">Preisorientierte Käufer*innen (Discounter-Snacks) und Halter*innen mit medizinischem Spezialbedarf (Diätfutter).</p></div>
+      </div>
+      <div class="personas">
+        <article class="persona reveal">
+          <span class="tagline">„Er soll's gut haben!“</span>
+          <div class="persona__top"><span class="avatar" style="background:var(--hr-blue)">L</span><div><span class="role">Persona 1 · Hauptzielgruppe</span><h3>Lea, 28 – Hunde-Mama</h3></div></div>
+          <dl>
+            <div><dt>Alltag</dt><dd>Großstadt, Bürojob mit Homeoffice, kleiner bis mittlerer Hund – der Hund ist Familie.</dd></div>
+            <div><dt>Kanäle</dt><dd>Instagram &amp; TikTok täglich, Pinterest für Inspiration</dd></div>
+            <div><dt>Kauftreiber</dt><dd>Schöne Verpackung (sie postet sie), gute Zutaten, „ihm was gönnen“</dd></div>
+            <div><dt>Hürden</dt><dd>Preis, Misstrauen gegenüber neuen Marken</dd></div>
+            <div><dt>Überzeugt durch</dt><dd>Rami-Content, Videos echter Kundenhunde, Rabatt auf die Erstbestellung</dd></div>
+          </dl>
+        </article>
+        <article class="persona reveal" style="--d:.1s">
+          <span class="tagline">„Das perfekte Geschenk!“</span>
+          <div class="persona__top"><span class="avatar" style="background:var(--hr-blush)">S</span><div><span class="role">Persona 2 · Nebenzielgruppe</span><h3>Sophie, 31 – Geschenk-Sucherin</h3></div></div>
+          <dl>
+            <div><dt>Alltag</dt><dd>Kein eigener Hund – aber die beste Freundin hat einen.</dd></div>
+            <div><dt>Kanäle</dt><dd>Pinterest-Suche („Geschenk für Hundebesitzer“), Instagram</dd></div>
+            <div><dt>Kauftreiber</dt><dd>Die Verpackung ist das Geschenk, Geschenkbox mit Grußkarte</dd></div>
+            <div><dt>Hürden</dt><dd>Unsicher, ob der Hund die Snacks verträgt</dd></div>
+            <div><dt>Überzeugt durch</dt><dd>Fertige Geschenk-Sets, saisonale Pins (Weihnachten, Valentinstag)</dd></div>
+          </dl>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 POSITIONIERUNG -->
+  <section class="section" id="positionierung">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="sec-num">05 — POSITIONIERUNG &amp; USP</span>
+        <h2 class="sec-title">Wo happy rami steht<span class="hl">.</span></h2>
+      </div>
+      <p class="statement reveal">Für design- und qualitätsbewusste Hundehalter*innen, die ihrem Hund Freude schenken wollen, ist <em>happy rami</em> die Premium-Snackmarke, die echte Zutaten mit verspieltem Design und einer echten Hunde-Geschichte verbindet – denn hinter jeder Packung stehen echte Hunde.</p>
+      <div class="pos">
+        <div class="reveal" style="padding:10px 10px 40px 40px">
+          <div class="matrix" role="img" aria-label="Positionierungs-Matrix: Preis gegen Tonalität. happy rami liegt bei Premium und emotional-verspielt.">
+            <span class="axis axis--y">Preis ↑</span>
+            <span class="axis axis--yt">Premium</span><span class="axis axis--yb">Günstig</span>
+            <span class="axis axis--xl">Sachlich</span><span class="axis axis--xr">Emotional</span>
+            <div class="pt" style="left:24%;top:78%"><i></i><span>Supermarkt-Snacks</span></div>
+            <div class="pt" style="left:28%;top:24%"><i></i><span>Pets Deli</span></div>
+            <div class="pt pt--hr" style="left:76%;top:22%"><i></i><span>happy rami</span></div>
+          </div>
+        </div>
+        <div class="usp reveal" style="--d:.1s">
+          <div class="card"><h4>Benchmark: Pets Deli</h4><p>Premium-Marke aus Sicht des modernen Premiumkonsumenten, stark über E-Commerce, datengetriebenes Marketing und D2C aufgebaut<sup class="src"><a href="#q11">[11]</a></sup>. Größte Stärke laut Test: Transparenz<sup class="src"><a href="#q13">[13]</a></sup>. Mein Fazit: Über Ernährungswissen gewinne ich dort nicht – über Emotion schon.</p></div>
+          <div class="card"><h4>USP</h4><p>Eine Marke wie eine Serie, nicht wie ein Katalog: Ein echter Hunde-Cast erzählt eine fortlaufende Geschichte – jeder Snack ist ein Teil davon.</p></div>
+          <div class="card"><h4>Markenwerte &amp; Tonalität</h4><div class="values"><span>Freude</span><span>Ehrlichkeit</span><span>Liebe zum Detail</span><span>Gemeinschaft</span></div><p style="margin-top:12px">Du-Ansprache, warm, verspielt, leicht frech – nie albern. In Social Media spricht Rami selbst.</p></div>
+        </div>
+      </div>
+      <div class="msgs">
+        <div class="msg reveal"><span class="n">BOTSCHAFT 01</span><h4>Echte Zutaten, keine Kompromisse</h4><p>Ohne Zucker &amp; künstliche Zusätze, Made in Germany – die volle Zutatenliste offen auf Packung &amp; Website.</p></div>
+        <div class="msg reveal" style="--d:.08s"><span class="n">BOTSCHAFT 02</span><h4>Echte Hunde, echte Story</h4><p>Rami, Kira &amp; Ray – und das Siegel „von Rami getestet“.</p></div>
+        <div class="msg reveal" style="--d:.16s"><span class="n">BOTSCHAFT 03</span><h4>Zu schön, um sie nur zu füttern</h4><p>Design zum Zeigen &amp; Verschenken – holt Persona Sophie ab.</p></div>
+      </div>
+      <div class="claim reveal">
+        <small>Claim</small>
+        <h3>Share the <span class="wiggle">happy</span>.</h3>
+        <p>Rami ist happy. Kira ist happy. Und dein Hund gleich auch.</p>
+      </div>
+      <div class="why reveal"><b>Warum dieser Claim?</b><p>„happy“ steckt im Markennamen und im Claim – das stärkt die Wiedererkennung. Gleichzeitig ist er ein Call-to-Action: teilen, verschenken, weiterempfehlen. Genau diese Mechanik ziehe ich durch den ganzen Funnel.</p></div>
+      <div class="products">
+        <div class="product reveal" style="background:var(--hr-pouch)"><span class="tag">Klassiker</span><div class="pouch"></div><h4>Rami's Favourites</h4><p>Huhn &amp; Süßkartoffel</p></div>
+        <div class="product reveal" style="background:var(--hr-blush);--d:.08s"><span class="tag">Story-Sorte</span><div class="pouch"></div><h4>Rami's Love Bites</h4><p>Ente &amp; Apfel – die Snacks, die er Kira mitbringt</p></div>
+        <div class="product reveal" style="background:var(--hr-sage);--d:.16s"><span class="tag">Einstieg</span><div class="pouch"></div><h4>Rami's Happy Box</h4><p>Probier- &amp; Geschenkset aller Sorten</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 FUNNEL -->
+  <section class="section" id="funnel">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="sec-num">06 — FUNNEL &amp; KANÄLE</span>
+        <h2 class="sec-title">See – Think – Do – Care<span class="hl">.</span></h2>
+        <p class="sec-intro">Jeder Kanal bekommt eine klare Aufgabe auf dem Weg vom ersten Sehen bis zum Wiederkauf.</p>
+      </div>
+      <div class="funnel reveal">
+        <div class="stage"><div class="stage__bar"><b>SEE</b><small>Aufmerksamkeit</small></div><div class="stage__body"><div><h5>Kanäle</h5><div class="pills"><span>TikTok</span><span>Instagram Reels</span><span>Pinterest</span></div></div><div><h5>Inhalte</h5><p>Rami-Story als Serie, Trend-Sounds, Unboxing</p></div><div><h5>KPIs</h5><p>Reichweite, Views, Follower-Zuwachs</p></div></div></div>
+        <div class="stage"><div class="stage__bar" style="--d:.15s"><b>THINK</b><small>Vertrauen</small></div><div class="stage__body"><div><h5>Kanäle</h5><div class="pills"><span>Instagram</span><span>Pinterest</span><span>Website</span></div></div><div><h5>Inhalte</h5><p>Zutaten erklärt, „von Rami getestet“, Bewertungen, Behind the Scenes</p></div><div><h5>KPIs</h5><p>Saves, Shares, Profilbesuche, Link-Klicks</p></div></div></div>
+        <div class="stage"><div class="stage__bar" style="--d:.3s"><b>DO</b><small>Kauf</small></div><div class="stage__body"><div><h5>Kanäle</h5><div class="pills"><span>Onlineshop</span><span>Instagram Shopping</span><span>Retargeting</span></div></div><div><h5>Hebel</h5><p>Code SHARETHEHAPPY10, Happy Box als Einstieg, Gratis-Versand ab Mindestwert</p></div><div><h5>KPIs</h5><p>Conversion-Rate, Warenkorbwert, CPA, ROAS</p></div></div></div>
+        <div class="stage"><div class="stage__bar" style="--d:.45s"><b>CARE</b><small>Bindung</small></div><div class="stage__body"><div><h5>Kanäle</h5><div class="pills"><span>E-Mail</span><span>Community</span><span>Paket-Beileger</span></div></div><div><h5>Hebel</h5><p>Willkommens-Mails, Nachbestell-Erinnerung, Spar-Abo, Empfehlungscode</p></div><div><h5>KPIs</h5><p>Wiederkaufrate, Customer Lifetime Value, UGC-Posts</p></div></div></div>
+      </div>
+      <div class="dim reveal">
+        <div class="tbl-wrap">
+          <table class="tbl">
+            <caption>Kanal-Rollen &amp; Begründung</caption>
+            <thead><tr><th>Kanal</th><th>Aufgabe</th><th>Warum ich mich dafür entschieden habe</th></tr></thead>
+            <tbody>
+              <tr><td><b>TikTok</b></td><td>Reichweite &amp; Story-Serie</td><td>Unter 30-Jährige greifen lieber zu YouTube, Instagram oder TikTok<sup class="src"><a href="#q8">[8]</a></sup></td></tr>
+              <tr><td><b>Instagram</b></td><td>Community, Vertrauen, Shop</td><td>Instagram liegt laut ARD/ZDF-Medienstudie 2025 vor Facebook und TikTok<sup class="src"><a href="#q9">[9]</a></sup></td></tr>
+              <tr><td><b>Pinterest</b></td><td>Suche, Geschenke, Langzeit-Traffic</td><td>Pins leben ca. 4 Monate<sup class="src"><a href="#q7">[7]</a></sup>; bei Jugendlichen konnte nur Pinterest leicht zulegen<sup class="src"><a href="#q10">[10]</a></sup></td></tr>
+              <tr><td><b>Website</b></td><td>Story &amp; Kauf</td><td>Eigener D2C-Shop: volle Kontrolle über Marke, Daten &amp; Marge</td></tr>
+              <tr><td><b>E-Mail</b></td><td>Wiederkauf &amp; Bindung</td><td>Eigene Liste – unabhängig von Algorithmen</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07 COMMUNITY -->
+  <section class="section" id="community">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="sec-num">07 — COMMUNITY</span>
+        <h2 class="sec-title">The Happy Pack<span class="hl">.</span></h2>
+        <p class="sec-intro">Vorsichtige Menschen vertrauen anderen Hundehalter*innen mehr als einer Marke<sup class="src"><a href="#q5">[5]</a></sup>. Deshalb baue ich eine Community, die selbst Content produziert.</p>
+      </div>
+      <p class="hashtag reveal" aria-label="Hashtag happy rami">#happyrami</p>
+      <div class="comm">
+        <div class="card reveal"><span class="ico" style="background:var(--hr-blue)">📸</span><h4>#happyrami</h4><p>Kund*innen posten ihre Hunde, die besten werden im Profil gefeatured – mit Erlaubnis und kleiner Gratis-Probe als Dankeschön.</p></div>
+        <div class="card reveal" style="--d:.08s"><span class="ico" style="background:var(--lime)">🐾</span><h4>Happy Walks</h4><p>Community-Spaziergänge in der Stadt: Online wird offline – und daraus entsteht neuer Content.</p></div>
+        <div class="card reveal" style="--d:.16s"><span class="ico" style="background:var(--hr-blush)">📣</span><h4>Broadcast-Kanal</h4><p>„The Happy Pack“ auf Instagram: exklusive Codes und neue Sorten, bevor sie im Shop sind.</p></div>
+        <div class="card reveal"><span class="ico" style="background:var(--hr-sage)">💬</span><h4>Rami antwortet</h4><p>Kommentare werden konsequent in Ramis Stimme beantwortet – die Marke bekommt eine Persönlichkeit.</p></div>
+        <div class="card reveal" style="--d:.08s"><span class="ico" style="background:var(--accent-soft)">🗳️</span><h4>Community entscheidet</h4><p>Umfragen zu neuen Sorten oder dem Namen einer Limited Edition.</p></div>
+        <div class="card later reveal" style="--d:.16s"><span class="ico" style="background:#fff">🧢</span><h4>Merch <span class="badge">später</span></h4><p>Bandanas, Leinen &amp; Totebags im happy-rami-Design als Ausbaustufe.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 08 INSTAGRAM -->
+  <section class="section" id="instagram">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="sec-num">08 — INSTAGRAM-PROFIL</span>
+        <h2 class="sec-title">Jedes Detail mit Absicht<span class="hl">.</span></h2>
+        <p class="sec-intro">So würde das Profil von happy rami aussehen – und warum ich jedes Element so gesetzt habe.</p>
+      </div>
+      <div class="ig">
+        <div class="phone-wrap reveal">
+          <div class="phone" role="img" aria-label="Mockup des Instagram-Profils von happy rami">
+            <div class="screen">
+              <div class="island"><span>9:41</span><i></i><span>●●●</span></div>
+              <div class="ig-top"><span>happyrami</span><span>☰</span></div>
+              <div class="ig-head">
+                <div class="ig-ava"><span><img src="hr-logo.webp" alt=""></span></div>
+                <div class="ig-stats"><div><b>24</b><small>Beiträge</small></div><div><b>1.208</b><small>Follower</small></div><div><b>87</b><small>Gefolgt</small></div></div>
+              </div>
+              <div class="ig-bio">
+                <div class="ig-name">happy rami Premium Hundesnacks</div>
+                <div class="ig-cat">Haustierbedarf</div>
+                <div>Premium-Hundesnacks mit echten Zutaten 🐾<br>Ohne Zucker &amp; künstliche Zusätze · Made in DE<br>Share the happy ➜ #happyrami<br>🎁 10 % für Newsletter-Fans 👇</div>
+                <div class="ig-link">🔗 10 % sichern – Newsletter und 4 weitere</div>
+              </div>
+              <div class="ig-btns"><span class="primary">Folgen</span><span>Nachricht</span><span>Shop ansehen</span></div>
+              <div class="ig-hl">
+                <div><i><span style="background:var(--hr-pouch)">📖</span></i><small>Story</small></div>
+                <div><i><span style="background:var(--hr-blush)">🦴</span></i><small>Sorten</small></div>
+                <div><i><span style="background:var(--hr-blue)">⭐</span></i><small>Rami testet</small></div>
+                <div><i><span style="background:var(--hr-sage)">🐾</span></i><small>Happy Pack</small></div>
+                <div><i><span style="background:var(--hr-sand)">📍</span></i><small>Happy Walks</small></div>
+                <div><i><span style="background:var(--accent-soft)">❓</span></i><small>Zutaten &amp; FAQ</small></div>
+                <div><i><span style="background:#fff3c4">💬</span></i><small>Bewertungen</small></div>
+              </div>
+              <div class="ig-tabs"><span>▦</span><span>▷</span><span>☺</span></div>
+              <div class="ig-grid">
+                <div class="tile" style="background:var(--hr-navy);color:#fff"><span class="pin">📌</span><span class="lbl">▶ Rami<br>vs. Ray</span></div>
+                <div class="tile" style="background:var(--hr-pouch)"><span class="pin">📌</span><span class="lbl">Unsere<br>3 Sorten →</span></div>
+                <div class="tile" style="background:var(--hr-sage)"><span class="pin">📌</span><span class="lbl">Happy Box<br>−10 %</span></div>
+                <div class="tile"><img src="polaroid-2.webp" alt="" loading="lazy"><span class="type">▶</span><span class="lbl on-img">Rami testet</span></div>
+                <div class="tile"><img src="hr-ad.webp" alt="" loading="lazy"><span class="lbl on-img">Echte Zutaten</span></div>
+                <div class="tile" style="background:var(--hr-blue)"><span class="lbl">#happyrami<br>of the week</span></div>
+                <div class="tile" style="background:var(--hr-blush)"><span class="type">▶</span><span class="lbl">Dating<br>Diaries</span></div>
+                <div class="tile" style="background:var(--hr-sand)"><span class="lbl">Zutaten<br>erklärt</span></div>
+                <div class="tile" style="background:var(--lime)"><span class="lbl">Happy Walk<br>📍 Sonntag</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="notes">
+          <div class="note reveal"><div><h4>Name-Feld als Keyword-Platz</h4><p><code>happy rami Premium Hundesnacks</code> <span class="counter">30/30 Zeichen</span></p><p>Das Name-Feld ist bis zu 30 Zeichen lang und durchsuchbar<sup class="src"><a href="#q14">[14]</a></sup>. Ich habe es genutzt, um Markennamen und das wichtigste Suchwort zu kombinieren: Wer „Premium Hundesnacks“ sucht, findet happy rami.</p></div></div>
+          <div class="note reveal"><div><h4>Bio mit klarer Struktur</h4><div class="biobox">Premium-Hundesnacks mit echten Zutaten 🐾
+Ohne Zucker &amp; künstliche Zusätze · Made in DE
+Share the happy ➜ #happyrami
+🎁 10 % für Newsletter-Fans 👇</div><p><span class="counter">144/150 Zeichen</span> – Produktversprechen → Qualitätsbelege → Claim &amp; Hashtag → Call-to-Action. Instagrams Suche nutzt Keywords aus Name und Bio<sup class="src"><a href="#q14">[14]</a></sup>, deshalb stehen konkrete Belege statt leerer Premium-Floskeln drin.</p></div></div>
+          <div class="note reveal"><div><h4>Der Code kommt per Newsletter</h4><p>Ich habe mich bewusst dagegen entschieden, den Rabattcode offen in die Bio zu schreiben. Wer ihn will, meldet sich zum Newsletter an – so baue ich eine eigene E-Mail-Liste auf, die unabhängig vom Algorithmus funktioniert.</p></div></div>
+          <div class="note reveal"><div><h4>5 Links – alle messbar</h4><p>Instagram erlaubt bis zu 5 Links<sup class="src"><a href="#q14">[14]</a></sup>: Newsletter, Shop/Happy Box, Unsere Story, Happy Walks, Bewertungen. Jeder Link bekommt UTM-Parameter (<code>?utm_source=instagram</code>), damit ich sehe, welcher Link wirklich verkauft.</p></div></div>
+          <div class="note reveal"><div><h4>Highlights entlang der Customer Journey</h4><p>Story → Sorten → Rami testet → Happy Pack → Happy Walks → Zutaten &amp; FAQ → Bewertungen. Die Reihenfolge folgt den Fragen einer neuen Besucherin: Wer seid ihr? Was gibt es? Kann ich euch vertrauen?</p></div></div>
+          <div class="note reveal"><div><h4>Grid-Rhythmus &amp; fixierte Beiträge</h4><p>Pro Reihe: Reel → Produkt → Community. Drei fixierte Beiträge beantworten die wichtigsten Fragen sofort: die Story („Rami vs. Ray“), die Sorten und die Happy Box als Einstieg.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 09 NEWSLETTER -->
+  <section class="section" id="newsletter">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="sec-num">09 — NEWSLETTER</span>
+        <h2 class="sec-title">Vom Follower zur Kundin<span class="hl">.</span></h2>
+        <p class="sec-intro">Die Willkommensserie erzählt die Story weiter – und führt behutsam zum ersten Kauf.</p>
+      </div>
+      <div class="flow reveal">
+        <div class="flow__step"><div class="flow__icon">🔗</div><div><span class="when">EINSTIEG</span><h4>Bio-Link</h4><p>„10 % sichern“</p></div></div>
+        <div class="flow__step"><div class="flow__icon">✍️</div><div><span class="when">ANMELDUNG</span><h4>Newsletter</h4><p>E-Mail + Name des Hundes</p></div></div>
+        <div class="flow__step"><div class="flow__icon">🎁</div><div><span class="when">MAIL 1</span><h4>Dein Code</h4><p>Rami stellt sich vor</p></div></div>
+        <div class="flow__step"><div class="flow__icon">💌</div><div><span class="when">MAIL 2</span><h4>Die Story</h4><p>Rami, Kira &amp; Ray</p></div></div>
+        <div class="flow__step"><div class="flow__icon">⭐</div><div><span class="when">MAIL 3</span><h4>Bestseller</h4><p>Sorten &amp; Bewertungen</p></div></div>
+      </div>
+      <div class="dim reveal">
+        <div class="tbl-wrap">
+          <table class="tbl">
+            <caption>KPI-Übersicht – woran ich Erfolg messe</caption>
+            <thead><tr><th>Phase</th><th>Ziel</th><th>KPIs</th></tr></thead>
+            <tbody>
+              <tr><td><b>See</b></td><td>Bekanntheit</td><td>Reichweite, Views, Follower-Zuwachs</td></tr>
+              <tr><td><b>Think</b></td><td>Vertrauen</td><td>Saves, Shares, Profilbesuche, Link-Klicks</td></tr>
+              <tr><td><b>Do</b></td><td>Erstkauf</td><td>Newsletter-Anmeldungen, Conversion-Rate, CPA, ROAS</td></tr>
+              <tr><td><b>Care</b></td><td>Wiederkauf</td><td>Öffnungsrate, Wiederkaufrate, CLV, #happyrami-Posts</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10 AUSBLICK -->
+  <section class="section" id="ausblick" style="padding-top:20px">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="sec-num">10 — AUSBLICK</span>
+        <h2 class="sec-title">Was als Nächstes kommt<span class="hl">.</span></h2>
+      </div>
+      <div class="outlook reveal">
+        <div><b>Contentplan</b><small>4 Wochen · in Arbeit</small></div>
+        <div><b>Content-Serien</b><small>in Arbeit</small></div>
+        <div><b>Aktionen &amp; Influencer</b><small>coming soon</small></div>
+        <div><b>KPIs &amp; Budget</b><small>coming soon</small></div>
+        <div><b>Branding-Herleitung</b><small>coming soon</small></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ===== QUELLEN ===== -->
+<section class="sources" id="quellen">
+  <div class="wrap">
+    <span class="eyebrow">Quellen</span>
+    <ol>
+      <li id="q1">IVH/ZZF: Pressemitteilung „Der deutsche Heimtiermarkt 2025“ – <a href="https://www.zzf.de/fileadmin/ZZF/Pressemeldungen/2026/2026_04_27_Marktdaten_der_Heimtierbranche/IVH_ZZF_PM_Der_Deutsche_Heimtiermarkt_2025.pdf" target="_blank" rel="noopener">zzf.de</a></li>
+      <li id="q2">IVH/ZZF: Der deutsche Heimtiermarkt 2025 – Struktur &amp; Umsatzdaten – <a href="https://www.zzf.de/fileadmin/ZZF/Dokumente/Heimtiermarkt/Marktdaten_2025/ZZF_IVH_Der_deutsche_Heimtiermarkt_2025.pdf" target="_blank" rel="noopener">zzf.de</a></li>
+      <li id="q3">onlinemarktplatz.de: Pet Economy im E-Commerce – <a href="https://onlinemarktplatz.de/267337/pet-economy-im-e-commerce/" target="_blank" rel="noopener">onlinemarktplatz.de</a></li>
+      <li id="q4">Stuttgarter Zeitung: YouGov-Studie im Auftrag von ZooRoyal, 2026 – <a href="https://www.stuttgarter-zeitung.de/panorama/gen-z-vs-boomer-sind-junge-hundehalter-strenger-als-aeltere-79566161.html" target="_blank" rel="noopener">stuttgarter-zeitung.de</a></li>
+      <li id="q5">Pet Worldwide: Understanding Germany's dog owners, 2026 – <a href="https://www.petworldwide.net/content-1/news/2026/06/11/free/understanding-germanys-dog-owners.html" target="_blank" rel="noopener">petworldwide.net</a></li>
+      <li id="q6">Mintel: Tierfutter Markt Report 2026 – Deutschland – <a href="https://store.mintel.com/de/reports/deutschland-haustierfutter-markt-report" target="_blank" rel="noopener">mintel.com</a></li>
+      <li id="q7">Metricool: No country for old content – <a href="https://newsletter.metricool.com/p/no-country-for-old-content" target="_blank" rel="noopener">metricool.com</a></li>
+      <li id="q8">Utopia: ARD/ZDF-Medienstudie 2025 – <a href="https://utopia.de/utopia-insights/ardzdf-medienstudie-zwischen-podcasts-social-video-und-digitalem-wandel/" target="_blank" rel="noopener">utopia.de</a></li>
+      <li id="q9">onlinemarketing.de: ARD/ZDF-Medienstudie 2025 – <a href="https://onlinemarketing.de/cases/ard-zdf-medienstudie-2025" target="_blank" rel="noopener">onlinemarketing.de</a></li>
+      <li id="q10">Tagesspiegel: Jugend-Digitalstudie 2025 (Postbank) – <a href="https://www.tagesspiegel.de/gesellschaft/medien/jugend-digitalstudie-2025-grosse-social-media-plattformen-verlieren-jugendliche-nutzer-15040710.html" target="_blank" rel="noopener">tagesspiegel.de</a></li>
+      <li id="q11">retail-news.de: VAFO übernimmt Pets Deli – <a href="https://retail-news.de/vafo-uebernahme-pets-deli-deutschland/" target="_blank" rel="noopener">retail-news.de</a></li>
+      <li id="q12">Interzoo: Aussteller PETS DELI Tonius GmbH – <a href="https://www.interzoo.com/en/exhibitors/pets-deli-tonius-gmbh-2498547" target="_blank" rel="noopener">interzoo.com</a></li>
+      <li id="q13">hundeo.com: Pets Deli Hundefutter Test 2026 – <a href="https://www.hundeo.com/hundefutter/marken/pets-deli" target="_blank" rel="noopener">hundeo.com</a></li>
+      <li id="q14">Hootsuite: Instagram-Bio – Specs (Name-Feld, Bio, Links) und Suche – <a href="https://blog.hootsuite.com/fr/instagram-bio/" target="_blank" rel="noopener">hootsuite.com</a>, <a href="https://blog.hootsuite.com/instagram-bio-ideas/" target="_blank" rel="noopener">hootsuite.com</a></li>
+      <li id="q15">Der Rudelreport, Webinar-Folien 10/2025 – <a href="https://www.petonline.de/_Resources/Persistent/a/5/4/6/a546e044572b2a059e7d993c7ce7a184efda2385/Webinar-Rudelreport-10-2025_Folien.pdf" target="_blank" rel="noopener">petonline.de</a></li>
+    </ol>
+    <p style="font-size:13px;color:var(--muted);margin-top:20px">happy rami ist eine fiktive Marke, entwickelt als Portfolio-Projekt. Rami, Kira und Ray sind echte Hunde.</p>
+    <div class="back-cta">
+      <a class="btn" href="index.html#projekte">← Zurück zu allen Projekten</a>
+      <a class="btn" href="index.html#kontakt" style="background:var(--accent)">Kontakt aufnehmen</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer"><div class="wrap"><span>© <span id="year"></span> Nikol Leer</span><a href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">nach oben ↑</a></div></footer>
+
+<script>
+(function () {
+  "use strict";
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  /* Farbcodes kopieren */
+  document.querySelectorAll(".swatch").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var hex = b.getAttribute("data-hex");
+      function done() { b.classList.add("copied"); setTimeout(function () { b.classList.remove("copied"); }, 1600); }
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(hex).then(done, done); else done();
+    });
+  });
+
+  /* Zähler */
+  function countUp(el) {
+    var end = parseFloat(el.getAttribute("data-count")), dec = +(el.getAttribute("data-dec") || 0);
+    if (isNaN(end) || reduce) return;
+    var t0 = null, dur = 1400;
+    function fmt(v) { return v.toFixed(dec).replace(".", ","); }
+    function tick(t) { if (!t0) t0 = t; var k = Math.min((t - t0) / dur, 1); k = 1 - Math.pow(1 - k, 3);
+      el.textContent = fmt(end * k); if (k < 1) requestAnimationFrame(tick); else el.textContent = fmt(end); }
+    requestAnimationFrame(tick);
+  }
+
+  /* Scroll-Reveal */
+  var els = document.querySelectorAll(".reveal");
+  if ("IntersectionObserver" in window && !reduce) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        en.target.classList.add("is-visible");
+        en.target.querySelectorAll("[data-count]").forEach(countUp);
+        io.unobserve(en.target);
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+    els.forEach(function (el) { io.observe(el); });
+  } else {
+    els.forEach(function (el) { el.classList.add("is-visible"); });
+  }
+})();
+</script>
+</body>
+</html>
