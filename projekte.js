@@ -3,9 +3,9 @@
   PROJEKTE – hier pflegst du dein Portfolio
   ============================================================
   So fügst du ein neues Projekt hinzu:
-  1. Zwei Bilder in den Ordner "bilder/" hochladen:
-       - großes Bild     z. B. bilder/mein-projekt.webp            (ca. 1800 px breit)
-       - Vorschaubild    z. B. bilder/mein-projekt-vorschau.webp   (ca. 900 px breit)
+  1. Zwei Bilder direkt ins Repo hochladen (Hauptordner, kein Unterordner):
+       - großes Bild     z. B. mein-projekt.webp            (ca. 1800 px breit)
+       - Vorschaubild    z. B. mein-projekt-vorschau.webp   (ca. 900 px breit)
      (JPG oder PNG funktionieren auch – dann einfach die Endung unten anpassen.
       Hast du nur ein Bild, trag bei "bild" und "vorschau" dasselbe ein.)
   2. Unten einen Block { ... }, kopieren, einfügen und ausfüllen.
@@ -22,22 +22,22 @@ window.PROJEKTE = [
     titel: "LIMO⁺",
     kategorie: "Kampagne",
     kurz: "Launch-Kampagne für eine Limo in der Dose – Plakat & Social Ads",
-    bild: "bilder/limo-plus.webp",
-    vorschau: "bilder/limo-plus-vorschau.webp"
+    bild: "limo-plus.webp",
+    vorschau: "limo-plus-vorschau.webp"
   },
   {
     titel: "happy rami",
     kategorie: "Packaging",
     kurz: "Markenauftritt & Verpackung für Hundesnacks",
-    bild: "bilder/happy-rami.webp",
-    vorschau: "bilder/happy-rami-vorschau.webp"
+    bild: "happy-rami.webp",
+    vorschau: "happy-rami-vorschau.webp"
   },
   {
     titel: "Cool Down",
     kategorie: "Social & Event",
     kurz: "Club-Event-Werbung – alle Social-Media-Formate, Story auch animiert",
-    bild: "bilder/cool-down.webp",
-    vorschau: "bilder/cool-down-vorschau.webp"
+    bild: "cool-down.webp",
+    vorschau: "cool-down-vorschau.webp"
   },
   {
     titel: "namnam",
@@ -47,15 +47,15 @@ window.PROJEKTE = [
     werkzeuge: "InDesign, Photoshop, AdobeStock, Illustrator",
     spassfaktor: "100/10",
     facts: ["4 Stunden", "1× Proteinshake"],
-    bild: "bilder/namnam.webp",
-    vorschau: "bilder/namnam-vorschau.webp"
+    bild: "namnam.webp",
+    vorschau: "namnam-vorschau.webp"
   },
   {
     titel: "Tropical Night",
     kategorie: "Social & Event",
     kurz: "Club-Event-Werbung – alle Social-Media-Formate, Story auch animiert",
-    bild: "bilder/tropical-night.webp",
-    vorschau: "bilder/tropical-night-vorschau.webp"
+    bild: "tropical-night.webp",
+    vorschau: "tropical-night-vorschau.webp"
   },
   {
     titel: "Vetain Vegan Protein",
@@ -65,8 +65,8 @@ window.PROJEKTE = [
     werkzeuge: "InDesign, Canva, AdobeStock, Photoshop",
     spassfaktor: "100/10",
     facts: ["2,5 Stunden", "1 L Tee"],
-    bild: "bilder/vetain.webp",
-    vorschau: "bilder/vetain-vorschau.webp"
+    bild: "vetain.webp",
+    vorschau: "vetain-vorschau.webp"
   },
   {
     titel: "knetä",
@@ -76,8 +76,8 @@ window.PROJEKTE = [
     werkzeuge: "InDesign, Photoshop, AdobeStock",
     spassfaktor: "10/10",
     facts: ["2 Stunden", "1× Porridge"],
-    bild: "bilder/knetae.webp",
-    vorschau: "bilder/knetae-vorschau.webp"
+    bild: "knetae.webp",
+    vorschau: "knetae-vorschau.webp"
   },
   {
     titel: "Business Secrets",
@@ -87,8 +87,8 @@ window.PROJEKTE = [
     werkzeuge: "InDesign, Photoshop",
     spassfaktor: "12/10",
     facts: ["3 Stunden", "1 L Tee"],
-    bild: "bilder/business-secrets.webp",
-    vorschau: "bilder/business-secrets-vorschau.webp"
+    bild: "business-secrets.webp",
+    vorschau: "business-secrets-vorschau.webp"
   },
   {
     titel: "altes eichamt",
@@ -98,8 +98,8 @@ window.PROJEKTE = [
     werkzeuge: "InDesign, Photoshop",
     spassfaktor: "9/10",
     facts: ["5 Stunden", "1 Dose Red Bull"],
-    bild: "bilder/altes-eichamt.webp",
-    vorschau: "bilder/altes-eichamt-vorschau.webp"
+    bild: "altes-eichamt.webp",
+    vorschau: "altes-eichamt-vorschau.webp"
   },
   {
     titel: "Marcel Vogt Immobilien",
@@ -108,8 +108,8 @@ window.PROJEKTE = [
     ziel: "Mit einer crossmedialen Kampagne die Sichtbarkeit des Maklerbüros im lokalen Markt erhöhen und Vertrauen bei Verkäufern und Käufern aufbauen.",
     werkzeuge: "InDesign, Adobe Stock, Photoshop",
     spassfaktor: "9/10",
-    bild: "bilder/mvogt-immobilien.webp",
-    vorschau: "bilder/mvogt-immobilien-vorschau.webp"
+    bild: "mvogt-immobilien.webp",
+    vorschau: "mvogt-immobilien-vorschau.webp"
   },
   {
     titel: "your health.",
@@ -119,8 +119,8 @@ window.PROJEKTE = [
     werkzeuge: "InDesign, Photoshop",
     spassfaktor: "20/10",
     facts: ["3,5 Stunden", "1× Proteinshake"],
-    bild: "bilder/your-health.webp",
-    vorschau: "bilder/your-health-vorschau.webp"
+    bild: "your-health.webp",
+    vorschau: "your-health-vorschau.webp"
   },
   {
     titel: "Shop-IQ",
@@ -130,7 +130,7 @@ window.PROJEKTE = [
     werkzeuge: "InDesign",
     spassfaktor: "7/10",
     facts: ["4,5 Stunden", "1× Porridge"],
-    bild: "bilder/shop-iq.webp",
-    vorschau: "bilder/shop-iq-vorschau.webp"
+    bild: "shop-iq.webp",
+    vorschau: "shop-iq-vorschau.webp"
   }
 ];
